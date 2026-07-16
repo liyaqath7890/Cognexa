@@ -200,7 +200,7 @@
 }
 
 .font-subtitle {
-  font-size: calc(20px * var(--font-scale-factor, 1));
+  font-size: calc(22px * var(--font-scale-factor, 1));
   line-height: 1.5;
   font-weight: 500;
   color: var(--text-secondary);

@@ -16,6 +16,12 @@ export default function ThemeSelector() {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  React.useEffect(() => {
+    const handleOpen = () => setIsOpen(true);
+    window.addEventListener('open-theme-customizer', handleOpen);
+    return () => window.removeEventListener('open-theme-customizer', handleOpen);
+  }, []);
+
   const appearances: { value: AppearanceType; label: string }[] = [
     { value: 'light', label: '☀️ Light' },
     { value: 'dark', label: '🌙 Dark' },

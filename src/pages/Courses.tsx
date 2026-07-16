@@ -18,7 +18,8 @@ import {
   SaaSIllustration, 
   SecurityIllustration, 
   NetworkIllustration,
-  AcademyIllustration
+  AcademyIllustration,
+  CoursesIllustration
 } from '@/components/Illustration';
 
 export default function Courses() {
@@ -83,15 +84,20 @@ export default function Courses() {
         
         <div className="max-w-7xl mx-auto space-y-16">
           
-          {/* Header Block */}
-          <div className="text-center max-w-3xl mx-auto space-y-6">
-            <Badge variant="secondary">Bootcamp Registry</Badge>
-            <h1 className="font-hero-title">
-              Curriculums Designed by <span className="text-gradient-purple text-glow">Architects</span>
-            </h1>
-            <p className="font-subtitle max-w-xl mx-auto leading-relaxed">
-              Master full stack web systems, system architectures, DevOps orchestration, and artificial intelligence models with line-by-line code reviews.
-            </p>
+          {/* Header Block in Two-Column Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <Badge variant="secondary">Bootcamp Registry</Badge>
+              <h1 className="font-hero-title">
+                Curriculums Designed by <span className="text-gradient-purple text-glow">Architects</span>
+              </h1>
+              <p className="font-subtitle leading-relaxed">
+                Master full stack web systems, system architectures, DevOps orchestration, and artificial intelligence models with line-by-line code reviews.
+              </p>
+            </div>
+            <div className="lg:col-span-5 flex justify-center">
+              <CoursesIllustration />
+            </div>
           </div>
 
           {/* Filters Toolbar */}

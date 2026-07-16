@@ -135,7 +135,7 @@ export default function Events() {
           )}
 
           {/* Incubator call out */}
-          <div className="relative rounded-3xl p-8 md:p-12 bg-[#FAF8FF] border border-primary/10 shadow-sm text-center max-w-3xl mx-auto space-y-6">
+          <div className="relative rounded-3xl p-8 md:p-12 bg-white border border-primary/10 shadow-sm text-center max-w-3xl mx-auto space-y-6">
             <div className="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto">
               <Award className="w-6 h-6 text-primary" />
             </div>

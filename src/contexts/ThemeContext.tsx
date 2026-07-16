@@ -171,31 +171,18 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     root.style.setProperty('--primary-light', `${activeAccent.primary}20`);
     root.style.setProperty('--primary-dark', `${activeAccent.primary}e0`);
 
-    // 2. Light/Dark logic
-    const isDark = appearance === 'dark' || (appearance === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    if (isDark) {
-      root.classList.add('dark');
-      root.classList.remove('light');
-      root.style.setProperty('--background', '#030712'); // Slate 950
-      root.style.setProperty('--background-alt', '#0B0F19');
-      root.style.setProperty('--surface', '#111827');
-      root.style.setProperty('--surface-hover', '#1F2937');
-      root.style.setProperty('--text-primary', '#F9FAFB');
-      root.style.setProperty('--text-secondary', '#D1D5DB');
-      root.style.setProperty('--text-muted', '#6B7280');
-      root.style.setProperty('--border-color', 'rgba(255, 255, 255, 0.08)');
-    } else {
-      root.classList.add('light');
-      root.classList.remove('dark');
-      root.style.setProperty('--background', '#FFFFFF');
-      root.style.setProperty('--background-alt', '#F8FAFC');
-      root.style.setProperty('--surface', '#F3F4F6');
-      root.style.setProperty('--surface-hover', '#E5E7EB');
-      root.style.setProperty('--text-primary', '#111827');
-      root.style.setProperty('--text-secondary', '#4B5563');
-      root.style.setProperty('--text-muted', '#9CA3AF');
-      root.style.setProperty('--border-color', 'rgba(0, 0, 0, 0.08)');
-    }
+    // 2. Light/Dark logic - strictly locked to White / Light Grey background per user's final design directions.
+    const isDark = false;
+    root.classList.add('light');
+    root.classList.remove('dark');
+    root.style.setProperty('--background', '#FFFFFF');
+    root.style.setProperty('--background-alt', '#F8FAFC');
+    root.style.setProperty('--surface', '#F3F4F6');
+    root.style.setProperty('--surface-hover', '#E5E7EB');
+    root.style.setProperty('--text-primary', '#111827');
+    root.style.setProperty('--text-secondary', '#4B5563');
+    root.style.setProperty('--text-muted', '#9CA3AF');
+    root.style.setProperty('--border-color', 'rgba(0, 0, 0, 0.08)');
 
     // 3. Card Style variables
     if (cardStyle === 'glass') {

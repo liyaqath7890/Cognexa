@@ -52,7 +52,7 @@ export default function Academy() {
 
   return (
     <PageBackground pattern="dots">
-      <div className="min-h-screen pt-32 pb-24 px-6 relative text-left bg-[#FAF8FF]">
+      <div className="min-h-screen pt-32 pb-24 px-6 relative text-left bg-white">
         <div className="max-w-7xl mx-auto space-y-24">
           
           {/* Hero Section */}

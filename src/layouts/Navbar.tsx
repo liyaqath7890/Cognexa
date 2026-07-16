@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, BookOpen, Briefcase, Trophy, Sparkles, LayoutDashboard } from 'lucide-react';
+import { Menu, X, ChevronDown, BookOpen, Briefcase, Trophy, Sparkles, LayoutDashboard, Palette } from 'lucide-react';
 import Logo from '@/components/Logo';
-import Button from '@/components/Button';
 import { useTheme, accentColors } from '@/contexts/ThemeContext';
 
 export default function Navbar() {
@@ -49,6 +48,10 @@ export default function Navbar() {
       ? `0 4px 20px rgba(${rgb}, 0.08)`
       : 'none',
     transition: 'background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
+  };
+
+  const openThemeCustomizer = () => {
+    window.dispatchEvent(new CustomEvent('open-theme-customizer'));
   };
 
   // Keep navigation text always in black / dark slate regardless of header background color
@@ -147,6 +150,13 @@ export default function Navbar() {
 
         {/* Right side CTAs (Black text) */}
         <div className="hidden lg:flex items-center space-x-5">
+          <button 
+            onClick={openThemeCustomizer}
+            className="flex items-center justify-center p-2 rounded-full border border-slate-950/10 hover:border-slate-950/20 bg-white/70 hover:bg-white text-slate-800 hover:text-primary transition cursor-pointer"
+            title="Branding & Layout"
+          >
+            <Palette className="w-4 h-4" />
+          </button>
           <Link
             to="/student/dashboard"
             className="flex items-center space-x-1.5 text-xs font-black uppercase tracking-wider text-slate-950/80 hover:text-slate-950 transition-all duration-200 hover:scale-105"
@@ -197,6 +207,15 @@ export default function Navbar() {
           ))}
 
           <div className="border-t border-slate-200 pt-4 flex flex-col space-y-3">
+            <button
+              onClick={() => {
+                setIsOpen(false);
+                setTimeout(openThemeCustomizer, 100);
+              }}
+              className="text-center py-2.5 text-xs font-black uppercase tracking-wider text-slate-700 border border-slate-200 rounded-full hover:bg-slate-50 transition cursor-pointer bg-white"
+            >
+              🎨 Branding Theme
+            </button>
             <Link
               to="/student/dashboard"
               className="text-center py-2.5 text-xs font-black uppercase tracking-wider text-slate-950 border border-slate-300 rounded-full hover:bg-slate-50 transition"

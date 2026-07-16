@@ -12,6 +12,7 @@ import { GlowCard, AnimatedCard } from '@/components/Card';
 import Badge from '@/components/Badge';
 import Modal from '@/components/Modal';
 import PageBackground from '@/components/PageBackground';
+import { InternshipsIllustration } from '@/components/Illustration';
 
 export default function Internships() {
   const [internshipsList, setInternshipsList] = useState<InternshipTrack[]>([]);
@@ -29,19 +30,24 @@ export default function Internships() {
 
   return (
     <PageBackground pattern="network">
-      <div className="min-h-screen pt-32 pb-24 px-6 relative text-left bg-[#F8FAFC]">
+      <div className="min-h-screen pt-32 pb-24 px-6 relative text-left bg-white">
 
       <div className="max-w-7xl mx-auto space-y-24">
         
-        {/* Header Block */}
-        <div className="text-center max-w-3xl mx-auto space-y-6">
-          <Badge variant="primary">Industrial Internships</Badge>
-          <h1 className="text-4xl md:text-6xl font-display font-black tracking-tight text-gray-900 leading-tight">
-            Accelerate Career Experience at <span className="text-gradient-purple text-glow">Scale</span>
-          </h1>
-          <p className="font-subtitle max-w-xl mx-auto leading-relaxed">
-            Gain production experience working on global enterprise SaaS. Complete code sprints, pass review metrics, and earn recommendations into top organizations.
-          </p>
+        {/* Header Block in Two-Column Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7 space-y-6 text-left">
+            <Badge variant="primary">Industrial Internships</Badge>
+            <h1 className="text-4xl md:text-6xl font-display font-black tracking-tight text-gray-900 leading-tight">
+              Accelerate Career Experience at <span className="text-gradient-purple text-glow">Scale</span>
+            </h1>
+            <p className="font-subtitle leading-relaxed">
+              Gain production experience working on global enterprise SaaS. Complete code sprints, pass review metrics, and earn recommendations into top organizations.
+            </p>
+          </div>
+          <div className="lg:col-span-5 flex justify-center">
+            <InternshipsIllustration />
+          </div>
         </div>
 
         {/* Tracks Grid */}

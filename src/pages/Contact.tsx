@@ -10,6 +10,7 @@ import { GlowCard } from '@/components/Card';
 import Badge from '@/components/Badge';
 import { Input, TextArea } from '@/components/Input';
 import PageBackground from '@/components/PageBackground';
+import { ContactIllustration } from '@/components/Illustration';
 
 export default function Contact() {
   const { showToast } = useToast();
@@ -47,7 +48,7 @@ export default function Contact() {
 
   return (
     <PageBackground pattern="particles">
-      <div className="min-h-screen pt-32 pb-24 px-6 relative bg-[#FAF8FF]">
+      <div className="min-h-screen pt-32 pb-24 px-6 relative bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Left Column: Direct Contacts & QR Scanner */}
@@ -125,9 +126,14 @@ export default function Contact() {
                 </svg>
               </div>
               
-              <p className="text-[10px] text-gray-400 text-center leading-relaxed font-bold uppercase">
+              <p className="text-[10px] text-gray-450 text-center leading-relaxed font-bold uppercase">
                 Scan points to <span className="text-primary font-black">academy.cognexa.com/register</span> for direct mobile signups.
               </p>
+            </div>
+
+            {/* Premium Illustration */}
+            <div className="pt-6 flex justify-center">
+              <ContactIllustration />
             </div>
 
           </div>

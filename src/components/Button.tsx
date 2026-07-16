@@ -95,12 +95,12 @@ export default function Button({
 
   // Modern dynamic configurations linked to custom properties
   const variantStyles = {
-    primary: 'bg-gradient-to-r from-primary to-secondary hover:shadow-[0_8px_30px_var(--glow)] text-white border border-accent/20 font-semibold shadow-sm',
-    secondary: 'bg-white dark:bg-gray-900 text-primary border-2 border-primary/45 hover:border-primary hover:bg-primary-light hover:shadow-[0_8px_25px_var(--glow)] shadow-sm',
-    accent: 'bg-accent text-white hover:shadow-[0_8px_25px_var(--glow)] shadow-sm',
-    glass: 'bg-bg-card/60 backdrop-blur-md text-text-main hover:bg-bg-card/85 hover:shadow-md border border-border-color shadow-sm',
-    glow: 'bg-bg-card hover:bg-surface-hover text-primary border-2 border-primary/75 text-glow shadow-[0_8px_20px_var(--glow)] hover:shadow-[0_8px_30px_var(--glow)]',
-    outline: 'border-2 border-border-color hover:border-text-muted text-text-sub hover:bg-surface-hover'
+    primary: 'bg-gradient-to-r from-primary to-secondary hover:shadow-[0_8px_30px_var(--glow)] text-black border border-accent/20 font-semibold shadow-sm',
+    secondary: 'bg-white text-black border-2 border-primary/45 hover:border-primary hover:bg-primary-light hover:shadow-[0_8px_25px_var(--glow)] shadow-sm',
+    accent: 'bg-accent text-black hover:shadow-[0_8px_25px_var(--glow)] shadow-sm',
+    glass: 'bg-bg-card/60 backdrop-blur-md text-black hover:bg-bg-card/85 hover:shadow-md border border-border-color shadow-sm',
+    glow: 'bg-bg-card hover:bg-surface-hover text-black border-2 border-primary/75 text-glow shadow-[0_8px_20px_var(--glow)] hover:shadow-[0_8px_30px_var(--glow)]',
+    outline: 'border-2 border-border-color hover:border-text-muted text-black hover:bg-surface-hover'
   };
 
   return (

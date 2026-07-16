@@ -22,7 +22,16 @@ import {
   ProgrammingIllustration, 
   AnalyticsIllustration,
   ERPIllustration,
-  AcademyIllustration
+  AcademyIllustration,
+  PIMIllustration,
+  InventoryIllustration,
+  CRMIllustration,
+  HRMSIllustration,
+  LMSIllustration,
+  HospitalERPIllustration,
+  RestaurantERPIllustration,
+  ConstructionERPIllustration,
+  AIJobPlatformIllustration
 } from '@/components/Illustration';
 
 export default function Products() {
@@ -65,23 +74,23 @@ export default function Products() {
       case 'school-erp':
         return <ERPIllustration />;
       case 'pim':
-        return <SaaSIllustration />;
+        return <PIMIllustration />;
       case 'inventory':
-        return <LaptopIllustration />;
+        return <InventoryIllustration />;
       case 'crm':
-        return <NetworkIllustration />;
+        return <CRMIllustration />;
       case 'hrms':
-        return <SecurityIllustration />;
+        return <HRMSIllustration />;
       case 'lms':
-        return <AcademyIllustration />;
+        return <LMSIllustration />;
       case 'hospital-erp':
-        return <DevIllustration />;
+        return <HospitalERPIllustration />;
       case 'restaurant-erp':
-        return <ProgrammingIllustration />;
+        return <RestaurantERPIllustration />;
       case 'construction-erp':
-        return <AnalyticsIllustration />;
+        return <ConstructionERPIllustration />;
       case 'ai-job-platform':
-        return <AIResearchIllustration />;
+        return <AIJobPlatformIllustration />;
       default:
         return <SaaSIllustration />;
     }

@@ -6,6 +6,7 @@ import Button from '@/components/Button';
 import { GlowCard } from '@/components/Card';
 import Badge from '@/components/Badge';
 import PageBackground from '@/components/PageBackground';
+import { PricingIllustration } from '@/components/Illustration';
 
 export default function Pricing() {
   const comparison = [
@@ -21,15 +22,20 @@ export default function Pricing() {
       <div className="min-h-screen pt-32 pb-24 px-6 relative text-left bg-white">
         <div className="max-w-7xl mx-auto space-y-16">
           
-          {/* Header Block */}
-          <div className="text-center max-w-3xl mx-auto space-y-6">
-            <Badge variant="accent">Pricing Matrix</Badge>
-            <h1 className="font-hero-title">
-              Transparent Pricing, Built to <span className="text-gradient-purple text-glow">Scale</span>
-            </h1>
-            <p className="font-subtitle max-w-xl mx-auto leading-relaxed">
-              Choose a plan that fits your organization. All packages include secure database isolations, SSL handshakes, and monthly automated backup triggers.
-            </p>
+          {/* Header Block in Two-Column Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <Badge variant="accent">Pricing Matrix</Badge>
+              <h1 className="font-hero-title">
+                Transparent Pricing, Built to <span className="text-gradient-purple text-glow">Scale</span>
+              </h1>
+              <p className="font-subtitle leading-relaxed">
+                Choose a plan that fits your organization. All packages include secure database isolations, SSL handshakes, and monthly automated backup triggers.
+              </p>
+            </div>
+            <div className="lg:col-span-5 flex justify-center">
+              <PricingIllustration />
+            </div>
           </div>
 
           {/* Pricing Grid */}

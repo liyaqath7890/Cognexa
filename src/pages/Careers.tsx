@@ -4,7 +4,7 @@ import { GOOGLE_FORMS } from '@/constants/urls';
 import Button from '@/components/Button';
 import { GlowCard, AnimatedCard } from '@/components/Card';
 import Badge from '@/components/Badge';
-import { DevIllustration } from '@/components/Illustration';
+import { CareersIllustration } from '@/components/Illustration';
 import PageBackground from '@/components/PageBackground';
 
 export default function Careers() {
@@ -59,7 +59,7 @@ export default function Careers() {
               </p>
             </div>
             <div className="lg:col-span-5">
-              <DevIllustration />
+              <CareersIllustration />
             </div>
           </div>
 

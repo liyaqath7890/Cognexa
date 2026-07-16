@@ -85,7 +85,7 @@ export default function InternshipsRegister() {
 
   return (
     <PageBackground pattern="glass">
-      <div className="min-h-screen pt-32 pb-24 px-6 relative text-left bg-[#F8FAFC]">
+      <div className="min-h-screen pt-32 pb-24 px-6 relative text-left bg-white">
         <div className="max-w-7xl mx-auto space-y-20">
 
           {/* Hero segment */}
