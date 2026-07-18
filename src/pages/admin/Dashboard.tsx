@@ -246,8 +246,8 @@ export default function AdminDashboard() {
           </GlowCard>
 
           {/* Roster table */}
-          <div className="glass-panel overflow-hidden border border-white/5 rounded-2xl bg-[#11142A]/20">
-            <table className="w-full text-left text-xs text-gray-400">
+          <div className="glass-panel border border-white/5 rounded-2xl bg-[#11142A]/20 overflow-x-auto no-scrollbar">
+            <table className="w-full text-left text-xs text-gray-400 min-w-[700px]">
               <thead className="bg-white/5 text-white font-display font-bold uppercase tracking-wider">
                 <tr>
                   <th className="px-6 py-4">Student ID</th>
@@ -395,8 +395,8 @@ export default function AdminDashboard() {
       {tab === 'certificates' && (
         <div className="space-y-6 animate-fade-in">
           <h2 className="text-lg font-display font-semibold text-white">Verifiable Cryptographic Credentials Ledger</h2>
-          <div className="glass-panel overflow-hidden border border-white/5 rounded-2xl bg-[#11142A]/20">
-            <table className="w-full text-left text-xs text-gray-400">
+          <div className="glass-panel border border-white/5 rounded-2xl bg-[#11142A]/20 overflow-x-auto no-scrollbar">
+            <table className="w-full text-left text-xs text-gray-400 min-w-[750px]">
               <thead className="bg-white/5 text-white font-display font-bold uppercase tracking-wider">
                 <tr>
                   <th className="px-6 py-4">Certificate ID</th>

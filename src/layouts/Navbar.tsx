@@ -54,10 +54,10 @@ export default function Navbar() {
     window.dispatchEvent(new CustomEvent('open-theme-customizer'));
   };
 
-  // Keep navigation text always in black / dark slate regardless of header background color
+  // Keep navigation text always legible on dark header backgrounds
   const linkBase = 'text-xs font-black uppercase tracking-wider transition-all duration-200 hover:scale-105';
   const linkActive = `${linkBase} text-primary`; // Active state highlighted in active theme color
-  const linkInactive = `${linkBase} text-slate-950/80 hover:text-slate-950`;
+  const linkInactive = `${linkBase} text-slate-200 hover:text-white`;
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50" style={navStyle}>
@@ -148,25 +148,25 @@ export default function Navbar() {
           <Link to="/pricing" className={location.pathname === '/pricing' ? linkActive : linkInactive}>Pricing</Link>
         </div>
 
-        {/* Right side CTAs (Black text) */}
+        {/* Right side CTAs (Light text on dark) */}
         <div className="hidden lg:flex items-center space-x-5">
           <button 
             onClick={openThemeCustomizer}
-            className="flex items-center justify-center p-2 rounded-full border border-slate-950/10 hover:border-slate-950/20 bg-white/70 hover:bg-white text-slate-800 hover:text-primary transition cursor-pointer"
+            className="flex items-center justify-center p-2 rounded-full border border-white/10 hover:border-white/20 bg-white/5 hover:bg-white/10 text-slate-200 hover:text-primary transition cursor-pointer"
             title="Branding & Layout"
           >
             <Palette className="w-4 h-4" />
           </button>
           <Link
             to="/student/dashboard"
-            className="flex items-center space-x-1.5 text-xs font-black uppercase tracking-wider text-slate-950/80 hover:text-slate-950 transition-all duration-200 hover:scale-105"
+            className="flex items-center space-x-1.5 text-xs font-black uppercase tracking-wider text-slate-200 hover:text-white transition-all duration-200 hover:scale-105"
           >
             <LayoutDashboard className="w-3.5 h-3.5 text-primary" />
             <span>Dashboard</span>
           </Link>
           <Link to="/contact">
             <button
-              className="flex items-center space-x-1.5 text-xs font-black uppercase tracking-wider text-slate-950 py-2 px-5 rounded-full border border-slate-950/20 bg-white/70 hover:bg-white hover:border-slate-950/40 transition-all duration-200 hover:scale-105 hover:shadow-md"
+              className="flex items-center space-x-1.5 text-xs font-black uppercase tracking-wider text-white py-2 px-5 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/40 transition-all duration-200 hover:scale-105 hover:shadow-md"
             >
               <Sparkles className="w-3.5 h-3.5 text-primary" />
               <span>Connect Now</span>
@@ -174,20 +174,20 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Hamburger (Black) */}
+        {/* Hamburger (Light) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 text-slate-950 hover:text-primary cursor-pointer border-none bg-transparent"
+          className="lg:hidden p-2 text-slate-200 hover:text-primary cursor-pointer border-none bg-transparent"
           aria-label="Toggle navigation"
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Drawer (Black text / White-glass background) */}
+      {/* Mobile Drawer (Light text / Dark-glass background) */}
       {isOpen && (
         <div
-          style={{ background: `rgba(255, 255, 255, 0.98)`, borderTop: `1px solid rgba(${rgb}, 0.15)` }}
+          style={{ background: `rgba(9, 5, 20, 0.98)`, borderTop: `1px solid rgba(${rgb}, 0.15)` }}
           className="lg:hidden absolute top-full left-0 w-full py-6 px-6 flex flex-col space-y-4 shadow-xl backdrop-blur-xl"
         >
           {[
@@ -199,31 +199,31 @@ export default function Navbar() {
               key={path}
               to={path}
               className={`text-sm font-black uppercase tracking-wide transition ${
-                location.pathname === path ? 'text-primary' : 'text-slate-950/80 hover:text-slate-950'
+                location.pathname === path ? 'text-primary' : 'text-slate-200 hover:text-white'
               }`}
             >
               {label}
             </Link>
           ))}
 
-          <div className="border-t border-slate-200 pt-4 flex flex-col space-y-3">
+          <div className="border-t border-white/10 pt-4 flex flex-col space-y-3">
             <button
               onClick={() => {
                 setIsOpen(false);
                 setTimeout(openThemeCustomizer, 100);
               }}
-              className="text-center py-2.5 text-xs font-black uppercase tracking-wider text-slate-700 border border-slate-200 rounded-full hover:bg-slate-50 transition cursor-pointer bg-white"
+              className="text-center py-2.5 text-xs font-black uppercase tracking-wider text-slate-200 border border-white/10 rounded-full hover:bg-white/5 transition cursor-pointer bg-white/5"
             >
               🎨 Branding Theme
             </button>
             <Link
               to="/student/dashboard"
-              className="text-center py-2.5 text-xs font-black uppercase tracking-wider text-slate-950 border border-slate-300 rounded-full hover:bg-slate-50 transition"
+              className="text-center py-2.5 text-xs font-black uppercase tracking-wider text-slate-200 border border-white/10 rounded-full hover:bg-white/5 transition"
             >
               Student Portal
             </Link>
             <Link to="/contact" className="text-center">
-              <button className="w-full py-2.5 text-xs font-black uppercase tracking-wider text-white bg-slate-950 hover:bg-slate-900 rounded-full transition">
+              <button className="w-full py-2.5 text-xs font-black uppercase tracking-wider text-white bg-primary hover:bg-primary-dark rounded-full transition">
                 Request Demo
               </button>
             </Link>

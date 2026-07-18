@@ -124,7 +124,7 @@ export default function Privacy() {
                       </div>
                       <h3 className="text-lg font-display font-bold">{sec.title}</h3>
                     </div>
-                    <div className="space-y-3 pl-12 text-sm text-gray-500 leading-relaxed font-sans font-semibold">
+                    <div className="space-y-3 pl-0 sm:pl-12 text-sm text-gray-500 leading-relaxed font-sans font-semibold">
                       {sec.content.map((paragraph, index) => (
                         <p key={index}>{paragraph}</p>
                       ))}

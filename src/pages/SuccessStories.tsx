@@ -39,7 +39,7 @@ export default function SuccessStories() {
           </div>
 
           {/* Filtering Tabs */}
-          <div className="flex overflow-x-auto pb-4 gap-2 no-scrollbar justify-center border-b border-gray-100">
+          <div className="flex overflow-x-auto pb-4 gap-2 no-scrollbar justify-start md:justify-center border-b border-gray-100">
             {categories.map((cat) => (
               <button
                 key={cat}

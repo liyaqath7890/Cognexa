@@ -11,27 +11,11 @@ export default function Careers() {
   const jobs = [
     {
       id: "job-1",
-      title: "Associate Software Engineer (React / TypeScript)",
+      title: "Full Stack MERN Stack Developer Internship",
       dept: "Engineering",
-      location: "Pune, India (Hybrid)",
-      type: "Full-Time",
-      desc: "Implement responsive interfaces, clean state machines, and hook structures for our PIM and Inventory dashboards using React 19 and Tailwind CSS."
-    },
-    {
-      id: "job-2",
-      title: "Senior Full Stack Architect (MERN / Go)",
-      dept: "Engineering",
-      location: "Bangalore, India (Hybrid)",
-      type: "Full-Time",
-      desc: "Architect scalable, multi-tenant databases, microservices APIs, and secure queue brokers handling high concurrent connection streams."
-    },
-    {
-      id: "job-3",
-      title: "AI Research Associate (Deep Learning)",
-      dept: "AI Innovation Labs",
-      location: "Remote",
-      type: "Full-Time / Contract",
-      desc: "Develop and fine-tune NLP embeddings and semantic ranking engines powering candidate-matching automation tools."
+      location: "Bengaluru, India",
+      type: "Internship",
+      desc: "Develop robust web applications using MongoDB, Express.js, React, and Node.js. Build responsive client interfaces, design schema models, and implement secure API endpoints."
     }
   ];
 

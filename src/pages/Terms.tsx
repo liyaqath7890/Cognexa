@@ -43,6 +43,23 @@ export default function Terms() {
             </p>
           </div>
 
+          {/* Mobile navigation categories scroller */}
+          <div className="flex lg:hidden overflow-x-auto pb-4 gap-2 no-scrollbar border-b border-gray-100 justify-start">
+            {sections.map((sec) => (
+              <button
+                key={sec.id}
+                onClick={() => handleScrollTo(sec.id)}
+                className={`px-4 py-2 text-xs font-semibold rounded-lg border whitespace-nowrap transition cursor-pointer ${
+                  activeSection === sec.id
+                    ? 'bg-primary/10 text-primary border-primary/30'
+                    : 'bg-transparent text-gray-500 border-gray-200 hover:text-primary hover:border-primary/50'
+                }`}
+              >
+                {sec.label}
+              </button>
+            ))}
+          </div>
+
           {/* Main Content Layout split grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             

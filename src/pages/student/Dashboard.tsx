@@ -288,7 +288,7 @@ export default function StudentDashboard() {
                 <p className="text-xs text-gray-400">Duration: {track.duration} • Assigned Mentor Architect: {track.mentor}</p>
                 
                 {/* Visual checkpoint steps */}
-                <div className="grid grid-cols-3 gap-2 pt-2 text-[10px] text-gray-500 uppercase font-bold text-center">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-2 text-[10px] text-gray-500 uppercase font-bold text-center">
                   <div className="p-2 bg-white/5 rounded border border-primary/20 text-[#B794FF]">1. Spec Onboarded</div>
                   <div className="p-2 bg-white/5 rounded border border-white/5">2. Sprint Review</div>
                   <div className="p-2 bg-white/5 rounded border border-white/5">3. Merge Approval</div>
@@ -312,17 +312,17 @@ export default function StudentDashboard() {
           {/* Certificate Print Preview */}
           <div 
             id="print-certificate"
-            className="w-full max-w-2xl border-4 border-[#8A5BFF]/60 bg-[#11142A] p-10 rounded-3xl relative overflow-hidden space-y-8"
+            className="w-full max-w-2xl border-4 border-[#8A5BFF]/60 bg-[#11142A] p-6 md:p-10 rounded-3xl relative overflow-hidden space-y-8"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#6C3BFF]/5 to-transparent pointer-events-none"></div>
             
             {/* Header branding */}
-            <div className="flex justify-between items-start">
+            <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start text-center sm:text-left gap-4">
               <div>
                 <h3 className="font-display font-black text-xl text-white tracking-widest uppercase">Cognexa Technologies</h3>
-                <span className="text-[10px] text-gray-500 uppercase tracking-wider">Verifiable Academy Credentials Ledger</span>
+                <span className="text-[10px] text-gray-500 uppercase tracking-wider block">Verifiable Academy Credentials Ledger</span>
               </div>
-              <ShieldCheck className="w-12 h-12 text-[#B794FF]" />
+              <ShieldCheck className="w-12 h-12 text-[#B794FF] flex-shrink-0" />
             </div>
 
             {/* Main credentials text */}
@@ -336,12 +336,12 @@ export default function StudentDashboard() {
             </div>
 
             {/* Cryptographic hash ledger code */}
-            <div className="flex flex-col sm:flex-row justify-between items-center text-[9px] text-gray-500 pt-6 border-t border-white/5 font-mono gap-4 w-full">
+            <div className="flex flex-col sm:flex-row justify-between items-center text-[9px] text-gray-500 pt-6 border-t border-white/5 font-mono gap-4 w-full text-center sm:text-left">
               <div>
                 <p>CREDENTIAL HASH: sha256:0x{profile.id}a90c2b1875e39d5b</p>
                 <p>DATE ISSUED: {new Date().toLocaleDateString()}</p>
               </div>
-              <div className="text-right">
+              <div className="text-center sm:text-right">
                 <p>SIGNATURE KEY: COGNEXA-ACADEMY-SECURE</p>
                 <p>STATUS: VERIFIED LEDGER ACTIVE</p>
               </div>

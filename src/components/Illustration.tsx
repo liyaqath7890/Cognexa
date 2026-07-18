@@ -55,8 +55,8 @@ function IllustrationImage({ src, alt, className = '' }: { src: string; alt: str
         className="relative z-10 w-full max-w-[480px] h-auto object-contain select-none"
         style={{
           filter: isDark
-            ? 'drop-shadow(0 12px 40px rgba(255,255,255,0.1))'
-            : 'drop-shadow(0 12px 40px rgba(108,59,255,0.18))'
+            ? 'url(#purple-white-duotone) drop-shadow(0 12px 40px rgba(255,255,255,0.1))'
+            : 'url(#purple-white-duotone) drop-shadow(0 12px 40px rgba(108,59,255,0.18))'
         }}
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}

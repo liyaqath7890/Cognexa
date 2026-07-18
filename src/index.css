@@ -240,3 +240,63 @@ html.lenis, html.lenis body {
 .lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/* Custom background & border overrides for locked dark theme */
+@layer utilities {
+  /* Override white background for page containers to be transparent so they show the pitch black body background */
+  div.min-h-screen.bg-white,
+  div.min-h-screen.bg-background-alt,
+  .bg-white.min-h-screen,
+  .bg-background-alt.min-h-screen {
+    background-color: transparent !important;
+  }
+
+  /* Override general bg-white to use card background token */
+  .bg-white {
+    background-color: var(--card-bg, rgba(255, 255, 255, 0.05)) !important;
+  }
+
+  /* Map light grey borders to theme border variables */
+  .border-gray-150,
+  .border-gray-150\/50,
+  .border-gray-200,
+  .border-gray-300 {
+    border-color: var(--border-color, rgba(255, 255, 255, 0.08)) !important;
+  }
+
+  /* Map light background input / container utilities to surface background */
+  .bg-slate-50,
+  .bg-slate-100 {
+    background-color: var(--surface) !important;
+  }
+  
+  /* Ensure general gray text uses secondary text color for legibility on black */
+  .text-gray-400,
+  .text-gray-500,
+  .text-gray-600,
+  .text-gray-700 {
+    color: var(--text-secondary) !important;
+  }
+
+  .text-slate-950,
+  .text-gray-800,
+  .text-gray-900 {
+    color: var(--text-primary) !important;
+  }
+
+  /* Ensure headings use text-primary */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary) !important;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+

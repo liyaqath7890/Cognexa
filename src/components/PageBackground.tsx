@@ -22,7 +22,7 @@ export default function PageBackground({ pattern, children }: PageBackgroundProp
     switch (activePattern) {
       case 'grid':
         return (
-          <svg className="absolute inset-0 w-full h-full pointer-events-none text-primary" style={{ opacity: strokeOpacity }} xmlns="http://www.w3.org/2000/svg">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ color: '#6C3BFF', opacity: strokeOpacity }} xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="bg-grid-pat" width="40" height="40" patternUnits="userSpaceOnUse">
                 <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="0.75" />
@@ -34,7 +34,7 @@ export default function PageBackground({ pattern, children }: PageBackgroundProp
 
       case 'dots':
         return (
-          <svg className="absolute inset-0 w-full h-full pointer-events-none text-primary" style={{ opacity: strokeOpacity }} xmlns="http://www.w3.org/2000/svg">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ color: '#6C3BFF', opacity: strokeOpacity }} xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="bg-dots-pat" width="24" height="24" patternUnits="userSpaceOnUse">
                 <circle cx="12" cy="12" r="1.2" fill="currentColor" />
@@ -47,7 +47,7 @@ export default function PageBackground({ pattern, children }: PageBackgroundProp
       case 'hexagons':
       case 'hexagon':
         return (
-          <svg className="absolute inset-0 w-full h-full pointer-events-none text-primary" style={{ opacity: fillOpacity }} xmlns="http://www.w3.org/2000/svg">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ color: '#6C3BFF', opacity: fillOpacity }} xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="bg-hex-pat" width="56" height="97" patternUnits="userSpaceOnUse">
                 <path d="M28 0 L56 16.16 L56 48.5 L28 64.66 L0 48.5 L0 16.16 Z M28 97 L56 80.84 L56 48.5 L28 32.34 L0 48.5 L0 80.84 Z" fill="none" stroke="currentColor" strokeWidth="1" />
@@ -60,7 +60,7 @@ export default function PageBackground({ pattern, children }: PageBackgroundProp
       case 'circuit':
       case 'circuits':
         return (
-          <svg className="absolute inset-0 w-full h-full pointer-events-none text-primary" style={{ opacity: strokeOpacity }} viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ color: '#6C3BFF', opacity: strokeOpacity }} viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <path d="M 50 100 L 250 100 L 350 200 L 600 200 M 100 400 L 300 400 L 400 300 L 700 300 M 500 50 L 500 150 L 550 200 L 680 200" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" />
             <circle cx="250" cy="100" r="3" fill="currentColor" />
             <circle cx="350" cy="200" r="3" fill="currentColor" />
@@ -74,14 +74,14 @@ export default function PageBackground({ pattern, children }: PageBackgroundProp
         return (
           <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ 
             opacity: isDark ? '0.07' : '0.03',
-            backgroundImage: 'linear-gradient(var(--primary) 1px, transparent 1px), linear-gradient(90deg, var(--primary) 1px, transparent 1px)', 
+            backgroundImage: 'linear-gradient(#6C3BFF 1px, transparent 1px), linear-gradient(90deg, #6C3BFF 1px, transparent 1px)', 
             backgroundSize: '30px 30px' 
           }} />
         );
 
       case 'neural':
         return (
-          <svg className="absolute inset-0 w-full h-full pointer-events-none text-primary" style={{ opacity: strokeOpacity }} viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ color: '#6C3BFF', opacity: strokeOpacity }} viewBox="0 0 1000 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <line x1="200" y1="150" x2="400" y2="250" stroke="currentColor" strokeWidth="1" />
             <line x1="400" y1="250" x2="500" y2="450" stroke="currentColor" strokeWidth="1" />
             <line x1="500" y1="450" x2="750" y2="350" stroke="currentColor" strokeWidth="1" />
@@ -101,7 +101,7 @@ export default function PageBackground({ pattern, children }: PageBackgroundProp
 
       case 'waves':
         return (
-          <svg className="absolute inset-0 w-full h-full pointer-events-none text-primary" style={{ opacity: strokeOpacity }} viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ color: '#6C3BFF', opacity: strokeOpacity }} viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <path d="M 0 100 Q 360 250 720 100 T 1440 100" stroke="currentColor" strokeWidth="1.5" />
             <path d="M 0 250 Q 360 400 720 250 T 1440 250" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 3" />
             <path d="M 0 400 Q 360 550 720 400 T 1440 400" stroke="currentColor" strokeWidth="1.5" />
@@ -110,7 +110,7 @@ export default function PageBackground({ pattern, children }: PageBackgroundProp
 
       case 'particles':
         return (
-          <svg className="absolute inset-0 w-full h-full pointer-events-none text-accent" style={{ opacity: strokeOpacity }} viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ color: '#B794FF', opacity: strokeOpacity }} viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="80" cy="120" r="2" fill="currentColor" />
             <circle cx="640" cy="180" r="1.5" fill="currentColor" />
             <circle cx="250" cy="320" r="3" fill="currentColor" />
@@ -124,14 +124,14 @@ export default function PageBackground({ pattern, children }: PageBackgroundProp
       case 'glass':
         return (
           <div className="absolute inset-0 w-full h-full pointer-events-none select-none overflow-hidden" style={{ opacity: fillOpacity }}>
-            <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-primary rounded-full blur-[120px]" />
-            <div className="absolute bottom-[30%] left-[5%] w-[350px] h-[350px] bg-secondary rounded-full blur-[120px]" />
+            <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] rounded-full blur-[120px]" style={{ backgroundColor: '#6C3BFF' }} />
+            <div className="absolute bottom-[30%] left-[5%] w-[350px] h-[350px] rounded-full blur-[120px]" style={{ backgroundColor: '#8A5BFF' }} />
           </div>
         );
 
       case 'network':
         return (
-          <svg className="absolute inset-0 w-full h-full pointer-events-none text-primary" style={{ opacity: strokeOpacity }} viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ color: '#6C3BFF', opacity: strokeOpacity }} viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M 0 100 H 1000 M 0 300 H 1000 M 0 600 H 1000 M 0 800 H 1000 M 200 0 V 1000 M 500 0 V 1000 M 800 0 V 1000" stroke="currentColor" strokeWidth="0.5" />
             <circle cx="200" cy="300" r="3" fill="currentColor" />
             <circle cx="500" cy="600" r="3" fill="currentColor" />
@@ -142,8 +142,8 @@ export default function PageBackground({ pattern, children }: PageBackgroundProp
       case 'glow':
         return (
           <div className="absolute inset-0 w-full h-full pointer-events-none select-none overflow-hidden" style={{ opacity: fillOpacity }}>
-            <div className="absolute top-[40%] left-[10%] w-[400px] h-[400px] rounded-full bg-primary blur-[130px]" />
-            <div className="absolute bottom-[10%] right-[20%] w-[500px] h-[500px] rounded-full bg-accent blur-[150px]" />
+            <div className="absolute top-[40%] left-[10%] w-[400px] h-[400px] rounded-full blur-[130px]" style={{ backgroundColor: '#6C3BFF' }} />
+            <div className="absolute bottom-[10%] right-[20%] w-[500px] h-[500px] rounded-full blur-[150px]" style={{ backgroundColor: '#B794FF' }} />
           </div>
         );
 
@@ -151,8 +151,8 @@ export default function PageBackground({ pattern, children }: PageBackgroundProp
       default:
         return (
           <div className="absolute inset-0 w-full h-full pointer-events-none select-none overflow-hidden" style={{ opacity: isDark ? '0.1' : '0.04' }}>
-            <div className="absolute top-[10%] left-[20%] w-[600px] h-[600px] rounded-full bg-primary blur-[150px]" />
-            <div className="absolute bottom-[20%] right-[10%] w-[700px] h-[700px] rounded-full bg-secondary blur-[180px]" />
+            <div className="absolute top-[10%] left-[20%] w-[600px] h-[600px] rounded-full blur-[150px]" style={{ backgroundColor: '#6C3BFF' }} />
+            <div className="absolute bottom-[20%] right-[10%] w-[700px] h-[700px] rounded-full blur-[180px]" style={{ backgroundColor: '#8A5BFF' }} />
           </div>
         );
     }

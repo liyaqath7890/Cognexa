@@ -171,18 +171,18 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     root.style.setProperty('--primary-light', `${activeAccent.primary}20`);
     root.style.setProperty('--primary-dark', `${activeAccent.primary}e0`);
 
-    // 2. Light/Dark logic - strictly locked to White / Light Grey background per user's final design directions.
-    const isDark = false;
-    root.classList.add('light');
-    root.classList.remove('dark');
-    root.style.setProperty('--background', '#FFFFFF');
-    root.style.setProperty('--background-alt', '#F8FAFC');
-    root.style.setProperty('--surface', '#F3F4F6');
-    root.style.setProperty('--surface-hover', '#E5E7EB');
-    root.style.setProperty('--text-primary', '#111827');
-    root.style.setProperty('--text-secondary', '#4B5563');
-    root.style.setProperty('--text-muted', '#9CA3AF');
-    root.style.setProperty('--border-color', 'rgba(0, 0, 0, 0.08)');
+    // 2. Black-only layout logic - locked to Pitch Black background per user's instructions.
+    const isDark = true;
+    root.classList.add('dark');
+    root.classList.remove('light');
+    root.style.setProperty('--background', '#030014'); // Pitch black background
+    root.style.setProperty('--background-alt', '#000000'); // Pure black background alt
+    root.style.setProperty('--surface', '#0A051A');
+    root.style.setProperty('--surface-hover', '#140C2E');
+    root.style.setProperty('--text-primary', '#FFFFFF');
+    root.style.setProperty('--text-secondary', '#E2E8F0');
+    root.style.setProperty('--text-muted', '#94A3B8');
+    root.style.setProperty('--border-color', 'rgba(255, 255, 255, 0.08)');
 
     // 3. Card Style variables
     if (cardStyle === 'glass') {

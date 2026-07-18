@@ -97,8 +97,8 @@ export default function Pricing() {
               <h2 className="font-section-title">Feature Checklist Matrix</h2>
             </div>
 
-            <div className="overflow-hidden border border-gray-200 rounded-3xl max-w-4xl mx-auto bg-white shadow-sm">
-              <table className="w-full text-left text-xs text-gray-600">
+            <div className="overflow-x-auto no-scrollbar border border-gray-200 rounded-3xl max-w-4xl mx-auto bg-white shadow-sm">
+              <table className="w-full text-left text-xs text-gray-600 min-w-[600px]">
                 <thead className="bg-gray-50 border-b border-gray-200 text-gray-800 font-display font-bold uppercase tracking-wider">
                   <tr>
                     <th className="px-6 py-4">Capability</th>
